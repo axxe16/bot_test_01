@@ -7,12 +7,16 @@ $messages = $bot->getReceivedMessages();
 foreach ($messages as $message)
 {
 	$recipientId = $message->senderId;
-	if($message->text)
+	if($message->text == trim("ciao"))
 	{
+		$bot->sendTextMessage($recipientId, $message->text . ' a te!');
+	}
+	elseif($message->text) {
 		$bot->sendTextMessage($recipientId, $message->text);
 	}
 	elseif($message->attachments)
 	{
 		$bot->sendTextMessage($recipientId, "Attachment received");
 	}
+	
 }
