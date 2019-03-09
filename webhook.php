@@ -9,7 +9,7 @@ foreach ($messages as $message)
 	$recipientId = $message->senderId;
 	if($message->text == trim("ciao"))
 	{
-		$bot->sendTextMessage($recipientId, $message->text . ' a te!');
+		$bot->sendTextMessage($recipientId, $message->text . ' a te! ' . print_r($message,true));
 	}
 	elseif($message->text) {
 		$bot->sendTextMessage($recipientId, $message->text);
