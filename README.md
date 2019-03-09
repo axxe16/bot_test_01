@@ -1,1 +1,2 @@
-# bot_test_01
+# facebook-echo-bot
+Sample echo Facebook bot using Messenger Platform API
