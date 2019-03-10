@@ -34,7 +34,7 @@ function processRequest($text)
 	}
 	elseif($text == '$bot')
 	{
-		$response = print_r($bot,true);
+		$response = print_r($bot);
 	}
 	elseif ($text=="scuola" || $text=="issm" || $text=="istituto" || $text=="san marco")
 	{
