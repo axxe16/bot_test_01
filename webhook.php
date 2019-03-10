@@ -32,6 +32,10 @@ function processRequest($text)
 	{
 		$response = "risposta alla domanda 2";
 	}
+	elseif($text == '$bot')
+	{
+		$response = print_r($bot,true)";
+	}
 	elseif ($text=="scuola" || $text=="issm" || $text=="istituto" || $text=="san marco")
 	{
 		
