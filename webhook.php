@@ -34,8 +34,43 @@ function processRequest($text)
 	{
 		$response = "risposta alla domanda 2";
 	}
-	elseif ($text=="debug")
+	elseif ($text=="scuola" || $text=="issm" || $text=="istituto" || $text=="san marco")
 	{
+		
+		
+     $response = ["attachment"=>[
+      "type"=>"template",
+      "payload"=>[
+        "template_type"=>"generic",
+        "elements"=>[
+          [
+            "title"=>"ISSM",
+            "item_url"=>"http://www.issm.it/",
+            "image_url"=>"http://www.issm.it/wp-content/themes/issm_theme/img/testata_logo_v2-1.png",
+            "subtitle"=>"Istituto Salesiano San Marco di Mestre",
+            "buttons"=>[
+              [
+                "type"=>"web_url",
+                "url"=>"http://www.issm.it",
+                "title"=>"Vai al sito web"
+              ],
+              [
+                "type"=>"postback",
+                "title"=>"Inizia a chattare",
+                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
+              ]              
+            ]
+          ]
+        ]
+      ]
+    ]];
+
+     $response = [
+    'recipient' => [ 'id' => $senderId ],
+    'message' => $answer 
+];
+		
+		
 		$response = print_r($request);
 	}
 	else
