@@ -36,7 +36,7 @@ function processRequest($text)
 	{
 		
 		
-     $response = ["attachment"=>[
+     $answer = ["attachment"=>[
       "type"=>"template",
       "payload"=>[
         "template_type"=>"generic",
